@@ -11,6 +11,7 @@ COPY ./destinations ./destinations
 RUN lerna bootstrap --hoist
 
 ARG path
+RUN ls -la $path
 RUN test -n "$path" || (echo "'path' argument is not set, e.g --build-arg path=destinations/airbyte-faros-destination" && false)
 ENV CONNECTOR_PATH $path
 
