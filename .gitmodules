@@ -1,0 +1,3 @@
+[submodule "sources/linkedin-pages-source"]
+	path = sources/linkedin-pages-source
+	url = git@github.com:Hunt-Gather-Create/linkedin-pages-submodule.git
