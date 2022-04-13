@@ -2,30 +2,41 @@
   "documentationUrl": "https://docs.faros.ai",
   "connectionSpecification": {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Jenkins Spec",
+    "title": "LinkedIn Pages Spec",
     "type": "object",
     "required": [
-      "server_url",
-      "user",
+      "id",
+      "secret",
       "token"
     ],
     "additionalProperties": false,
     "properties": {
-      "server_url": {
+      "id": {
         "type": "string",
-        "title": "Jenkins Server URL",
+        "title": "Client ID",
         "examples": [
-          "https://my-jenkins-server.example.com"
+          "g7rfr54fyguo8u"
         ]
       },
-      "user": {
+      "secret": {
         "type": "string",
-        "title": "Jenkins User"
+        "title": "Client Secret",
+        "examples": [
+          "f9djn3jduee8t9s2"
+        ],
+        "airbyte_secret": true
       },
       "token": {
         "type": "string",
-        "title": "Jenkins Token",
+        "title": "Access Token",
         "airbyte_secret": true
+      },
+      "start_time": {
+        "type": "string",
+        "format": "datetime",
+        "airbyte_type": "timestamp_without_timezone",
+        "title": "Start Time",
+        "description": "Test description"
       }
     }
   }
